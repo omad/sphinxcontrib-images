@@ -290,7 +290,7 @@ def configure_backend(app):
             raise IndexError("Cannot find sphinxcontrib-images backend "
                                 "with name `{}`.".format(backend_name_or_callable))
     elif callable(backend_name_or_callable):
-        pass
+        backend = backend_name_or_callable
     else:
         raise TypeError("sphinxcontrib-images backend is configured "
                         "improperly. It has to be a string (name of "
